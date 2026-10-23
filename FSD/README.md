@@ -45,7 +45,7 @@ On the Reports page, select a batch and choose **Generate with AI**. The server 
 When `OPENAI_API_KEY` is not set, the feature still works with a local evidence-based assessment of passed and failed tests.
 
 ## Deploy to Vercel
-Import the project folder containing `vercel.json` as the Vercel project root. The Vite client is built as a static site, and the Express API is served by Vercel functions.
+The Vite client is built as a static site, and the Express API is served by Vercel functions. This repository stores the project in the `FSD` subfolder, so set **Root Directory** to `FSD` in the Vercel project settings.
 
-In the Vercel project settings, add `MONGO_URI` with a MongoDB Atlas connection string. Add `OPENAI_API_KEY` and optionally `OPENAI_MODEL` if AI-generated compliance reports should use OpenAI. Redeploy after setting environment variables. Vercel's hosted functions cannot connect to a MongoDB instance running only on your local machine.
+In the Vercel project settings, add `MONGO_URI` with a MongoDB Atlas connection string. Add `OPENAI_API_KEY` and optionally `OPENAI_MODEL` if AI-generated compliance reports should use OpenAI. Redeploy after setting environment variables. Vercel's hosted functions cannot connect to a MongoDB instance running only on your local machine. Keep deployment protection enabled unless you intend the app to be publicly accessible.
 "
